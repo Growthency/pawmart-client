@@ -15,7 +15,7 @@ const UpdateListing = () => {
   // 1. Fetch the listing data to pre-fill the form
   useEffect(() => {
     setLoading(true);
-    fetch(`http://localhost:5000/listing/${id}`)
+    fetch(`https://pawmart-server.vercel.app/listing/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setListing(data);
@@ -51,7 +51,7 @@ const UpdateListing = () => {
     };
 
     // Send updated data to server
-    fetch(`http://localhost:5000/listing/${id}`, {
+    fetch(`https://pawmart-server.vercel.app/listing/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

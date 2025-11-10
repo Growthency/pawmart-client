@@ -12,7 +12,7 @@ const ListingDetails = () => {
   useTitle(listing ? `PawMart | ${listing.name}` : "PawMart | Details");
   useEffect(() => {
     setLoading(true);
-    fetch(`http://localhost:5000/listing/${id}`)
+    fetch(`https://pawmart-server.vercel.app/listing/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setListing(data);
@@ -48,7 +48,7 @@ const ListingDetails = () => {
     };
 
     // Send order data to server
-    fetch("http://localhost:5000/orders", {
+    fetch("https://pawmart-server.vercel.app/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",

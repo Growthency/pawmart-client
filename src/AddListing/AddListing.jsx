@@ -31,8 +31,7 @@ const AddListing = () => {
       email,
     };
 
-    // Send data to server
-    fetch("http://localhost:5000/listings", {
+    fetch("https://pawmart-server.vercel.app/listings", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -57,7 +56,6 @@ const AddListing = () => {
       <h2 className="text-3xl font-bold text-center mb-6">Add a New Listing</h2>
       <form onSubmit={handleAddListing} className="max-w-3xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Product/Pet Name */}
           <div className="form-control">
             <label className="label">
               <span className="label-text">Product/Pet Name</span>
@@ -71,7 +69,6 @@ const AddListing = () => {
             />
           </div>
 
-          {/* Category */}
           <div className="form-control">
             <label className="label">
               <span className="label-text">Category</span>
@@ -85,7 +82,6 @@ const AddListing = () => {
             </select>
           </div>
 
-          {/* Price */}
           <div className="form-control">
             <label className="label">
               <span className="label-text">Price ($)</span>
@@ -99,7 +95,6 @@ const AddListing = () => {
             />
           </div>
 
-          {/* Location */}
           <div className="form-control">
             <label className="label">
               <span className="label-text">Location</span>
@@ -113,7 +108,6 @@ const AddListing = () => {
             />
           </div>
 
-          {/* Image URL */}
           <div className="form-control md:col-span-2">
             <label className="label">
               <span className="label-text">Image (URL)</span>
@@ -127,7 +121,6 @@ const AddListing = () => {
             />
           </div>
 
-          {/* Date (Pick Up) */}
           <div className="form-control">
             <label className="label">
               <span className="label-text">Date (Pick Up)</span>
@@ -140,7 +133,6 @@ const AddListing = () => {
             />
           </div>
 
-          {/* Email (Readonly) */}
           <div className="form-control">
             <label className="label">
               <span className="label-text">Your Email</span>
@@ -154,7 +146,6 @@ const AddListing = () => {
             />
           </div>
 
-          {/* Description */}
           <div className="form-control md:col-span-2">
             <label className="label">
               <span className="label-text">Description</span>
@@ -168,7 +159,6 @@ const AddListing = () => {
           </div>
         </div>
 
-        {/* Submit Button */}
         <div className="form-control mt-8">
           <button type="submit" className="btn btn-primary btn-block">
             Add Listing

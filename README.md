@@ -1,16 +1,13 @@
-# React + Vite
+# 🐾 PawMart - Pet Adoption & Supply Portal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+PawMart হলো একটি কমিউনিটি-ভিত্তিক প্ল্যাটফর্ম যেখানে পোষা প্রাণী দত্তক (adoption) দেওয়া হয় এবং পোষা প্রাণীর বিভিন্ন পণ্য (খাবার, খেলনা ইত্যাদি) বিক্রি করা হয়।
 
-Currently, two official plugins are available:
+[Live Site Link - (এখানে তোমার ক্লায়েন্ট সাইটের লাইভ লিঙ্ক বসাবে)]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ওয়েবসাইটের প্রধান বৈশিষ্ট্য (Features):
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **সম্পূর্ণ CRUD অপারেশন:** ব্যবহারকারীরা (লগইন করা অবস্থায়) নতুন listing যোগ করতে, তাদের নিজেদের listing দেখতে, আপডেট করতে এবং ডিলিট করতে পারেন।
+- **Firebase অথেনটিকেশন:** ইমেইল/পাসওয়ার্ড এবং Google ব্যবহার করে নিরাপদ লগইন ও রেজিস্ট্রেশন সিস্টেম।
+- **ইউজার-ভিত্তিক প্রাইভেট রুট:** "My Listings", "My Orders", "Add Listing" এবং "Listing Details" পেজগুলো সুরক্ষিত; লগইন না করে কেউ দেখতে পারবে না।
+- **অর্ডার ও রিপোর্ট:** ব্যবহারকারীরা যেকোনো পণ্য অর্ডার করতে পারেন এবং "My Orders" পেজ থেকে তাদের অর্ডারের একটি PDF রিপোর্ট ডাউনলোড করতে পারেন (`jsPDF` ব্যবহার করে)।
+- **বোনাস ফিচার:** সাইটটিতে ডার্ক/লাইট মোড টগল এবং "Pets & Supplies" পেজে নামে সার্চ (search) করার সুবিধা রয়েছে।

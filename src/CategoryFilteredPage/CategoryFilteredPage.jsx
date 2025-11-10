@@ -13,7 +13,7 @@ const CategoryFilteredPage = () => {
   useEffect(() => {
     setLoading(true);
     // আমরা '/all-listings' API থেকেই সব ডেটা আনবো
-    fetch("http://localhost:5000/all-listings")
+    fetch("https://pawmart-server.vercel.app/all-listings")
       .then((res) => res.json())
       .then((data) => {
         // ক্লায়েন্ট সাইডেই URL-এর নামের সাথে ক্যাটাগরি ফিল্টার করবো
