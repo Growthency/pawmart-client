@@ -26,7 +26,6 @@ const MyOrders = () => {
     }
   }, [user]);
 
-  // PDF Download Function (Updated)
   const handleDownloadReport = () => {
     const doc = new jsPDF();
 
@@ -54,7 +53,6 @@ const MyOrders = () => {
       tableRows.push(orderData);
     });
 
-    // <-- পরিবর্তন এখানে: autoTable(doc, { ... })
     autoTable(doc, {
       head: [tableColumn],
       body: tableRows,
