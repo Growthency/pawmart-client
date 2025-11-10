@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import useTitle from "../hooks/useTitle.js";
 
 const ListingDetails = () => {
-  const { user } = useContext(AuthContext); // Get logged in user
+  const { user } = useContext(AuthContext);
   const [listing, setListing] = useState(null);
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
@@ -24,7 +24,6 @@ const ListingDetails = () => {
       });
   }, [id]);
 
-  // Handle Order Submit
   const handleOrderSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -43,11 +42,10 @@ const ListingDetails = () => {
       price: listing.price,
       address,
       phone,
-      date: listing.date, // Using the listing's pickup date
+      date: listing.date,
       additionalNotes: notes,
     };
 
-    // Send order data to server
     fetch("https://pawmart-server.vercel.app/orders", {
       method: "POST",
       headers: {
@@ -104,7 +102,6 @@ const ListingDetails = () => {
               {price == 0 ? "Free Adoption" : `$${price}`}
             </div>
 
-            {/* "Adopt / Order Now" Button - This now opens the modal */}
             <button
               className="btn btn-primary btn-lg"
               onClick={() => document.getElementById("order_modal").showModal()}
@@ -115,12 +112,10 @@ const ListingDetails = () => {
         </div>
       </div>
 
-      {/* ------ Order Modal ------- */}
       <dialog id="order_modal" className="modal">
         <div className="modal-box w-11/12 max-w-3xl">
           <h3 className="font-bold text-2xl mb-4">Confirm Your Order</h3>
           <form method="dialog" onSubmit={handleOrderSubmit}>
-            {/* Close button */}
             <button
               type="button"
               onClick={() => document.getElementById("order_modal").close()}
@@ -130,7 +125,6 @@ const ListingDetails = () => {
             </button>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {/* Buyer Name (readonly) */}
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Your Name</span>
@@ -143,7 +137,6 @@ const ListingDetails = () => {
                 />
               </div>
 
-              {/* Email (readonly) */}
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Your Email</span>
@@ -156,7 +149,6 @@ const ListingDetails = () => {
                 />
               </div>
 
-              {/* Product Name (readonly) */}
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Item Name</span>
@@ -169,7 +161,6 @@ const ListingDetails = () => {
                 />
               </div>
 
-              {/* Price (readonly) */}
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Price</span>
@@ -182,7 +173,6 @@ const ListingDetails = () => {
                 />
               </div>
 
-              {/* Quantity */}
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Quantity</span>
@@ -199,7 +189,6 @@ const ListingDetails = () => {
                 />
               </div>
 
-              {/* Date (readonly) */}
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Pick Up Date</span>
@@ -212,7 +201,6 @@ const ListingDetails = () => {
                 />
               </div>
 
-              {/* Phone */}
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Phone Number</span>
@@ -226,7 +214,6 @@ const ListingDetails = () => {
                 />
               </div>
 
-              {/* Address */}
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Your Address</span>
@@ -240,7 +227,6 @@ const ListingDetails = () => {
                 />
               </div>
 
-              {/* Additional Notes */}
               <div className="form-control md:col-span-2">
                 <label className="label">
                   <span className="label-text">
