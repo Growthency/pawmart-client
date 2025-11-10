@@ -35,7 +35,7 @@ const CategorySection = () => {
         >
           <figure>
             <img
-              src="https://images.pexels.com/photos/5999902/pexels-photo-5999902.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src="https://images.pexels.com/photos/7703083/pexels-photo-7703083.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt="Pet Food"
               className="w-full h-full object-cover"
             />
@@ -51,7 +51,7 @@ const CategorySection = () => {
         >
           <figure>
             <img
-              src="https://images.pexels.com/photos/2253634/pexels-photo-2253634.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src="https://images.pexels.com/photos/1124002/pexels-photo-1124002.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt="Accessories"
               className="w-full h-full object-cover"
             />
@@ -67,7 +67,7 @@ const CategorySection = () => {
         >
           <figure>
             <img
-              src="https://images.pexels.com/photos/7450379/pexels-photo-7450379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src="https://images.pexels.com/photos/6235233/pexels-photo-6235233.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt="Pet Care"
               className="w-full h-full object-cover"
               alt="Pet Care"
