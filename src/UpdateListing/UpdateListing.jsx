@@ -6,13 +6,12 @@ import useTitle from "../hooks/useTitle.js";
 
 const UpdateListing = () => {
   const { user } = useContext(AuthContext);
-  const { id } = useParams(); // Get ID from URL
+  const { id } = useParams();
   const navigate = useNavigate();
   const [listing, setListing] = useState(null);
   const [loading, setLoading] = useState(true);
   useTitle(listing ? `PawMart | Update: ${listing.name}` : "PawMart | Update");
 
-  // 1. Fetch the listing data to pre-fill the form
   useEffect(() => {
     setLoading(true);
     fetch(`https://pawmart-server.vercel.app/listing/${id}`)
@@ -27,7 +26,6 @@ const UpdateListing = () => {
       });
   }, [id]);
 
-  // 2. Handle the update submission
   const handleUpdateListing = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -50,7 +48,6 @@ const UpdateListing = () => {
       date,
     };
 
-    // Send updated data to server
     fetch(`https://pawmart-server.vercel.app/listing/${id}`, {
       method: "PUT",
       headers: {
@@ -62,7 +59,7 @@ const UpdateListing = () => {
       .then((data) => {
         if (data.modifiedCount > 0) {
           toast.success("Listing Updated Successfully!");
-          navigate("/my-listings"); // Go back to my listings page
+          navigate("/my-listings");
         }
       })
       .catch((error) => {
@@ -86,7 +83,6 @@ const UpdateListing = () => {
       </h2>
       <form onSubmit={handleUpdateListing} className="max-w-3xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Product/Pet Name */}
           <div className="form-control">
             <label className="label">
               <span className="label-text">Product/Pet Name</span>
@@ -100,7 +96,6 @@ const UpdateListing = () => {
             />
           </div>
 
-          {/* Category */}
           <div className="form-control">
             <label className="label">
               <span className="label-text">Category</span>
@@ -118,7 +113,6 @@ const UpdateListing = () => {
             </select>
           </div>
 
-          {/* Price */}
           <div className="form-control">
             <label className="label">
               <span className="label-text">Price ($)</span>
@@ -132,7 +126,6 @@ const UpdateListing = () => {
             />
           </div>
 
-          {/* Location */}
           <div className="form-control">
             <label className="label">
               <span className="label-text">Location</span>
@@ -146,7 +139,6 @@ const UpdateListing = () => {
             />
           </div>
 
-          {/* Image URL */}
           <div className="form-control md:col-span-2">
             <label className="label">
               <span className="label-text">Image (URL)</span>
@@ -160,7 +152,6 @@ const UpdateListing = () => {
             />
           </div>
 
-          {/* Date (Pick Up) */}
           <div className="form-control">
             <label className="label">
               <span className="label-text">Date (Pick Up)</span>
@@ -174,7 +165,6 @@ const UpdateListing = () => {
             />
           </div>
 
-          {/* Description */}
           <div className="form-control md:col-span-2">
             <label className="label">
               <span className="label-text">Description</span>
@@ -189,7 +179,6 @@ const UpdateListing = () => {
           </div>
         </div>
 
-        {/* Submit Button */}
         <div className="form-control mt-8">
           <button type="submit" className="btn btn-primary btn-block">
             Confirm Update
