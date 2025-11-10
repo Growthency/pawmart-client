@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion"; // <-- Framer Motion ইম্পোর্ট
+import { motion } from "framer-motion";
 
 const RecentListings = () => {
   const [listings, setListings] = useState([]);
@@ -47,9 +47,9 @@ const RecentListings = () => {
             <motion.div
               key={item._id}
               className="card bg-base-100 shadow-xl"
-              initial={{ opacity: 0, y: 50 }} // শুরু হবে অদৃশ্য এবং ৫০px নিচে
-              animate={{ opacity: 1, y: 0 }} // দৃশ্যমান হবে এবং ০px-এ আসবে
-              transition={{ duration: 0.5 }} // ০.৫ সেকেন্ড ধরে হবে
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
             >
               <figure className="h-56">
                 <img
@@ -72,7 +72,6 @@ const RecentListings = () => {
                 </div>
               </div>
             </motion.div>
-            // --- অ্যানিমেশন (শেষ) ---
           ))}
         </div>
       )}
