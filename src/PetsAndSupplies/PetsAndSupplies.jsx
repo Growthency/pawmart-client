@@ -5,8 +5,8 @@ import useTitle from "../hooks/useTitle.js";
 const PetsAndSupplies = () => {
   const [listings, setListings] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [category, setCategory] = useState(""); // State for category filter
-  const [searchTerm, setSearchTerm] = useState(""); // --- নতুন স্টেট (Search) ---
+  const [category, setCategory] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
 
   useTitle("PawMart | Pets & Supplies");
 
@@ -24,19 +24,16 @@ const PetsAndSupplies = () => {
       });
   }, []);
 
-  // --- নতুন ফিল্টার লজিক (Search + Category) ---
   const filteredListings = listings
     .filter((item) => {
-      // Category Filter
       if (category === "") {
-        return true; // No category selected, show all
+        return true;
       }
       return item.category === category;
     })
     .filter((item) => {
-      // Search Term Filter
       if (searchTerm === "") {
-        return true; // No search term, show all
+        return true;
       }
       return item.name.toLowerCase().includes(searchTerm.toLowerCase());
     });
@@ -56,9 +53,7 @@ const PetsAndSupplies = () => {
         <p className="text-gray-600">Browse everything available on PawMart.</p>
       </div>
 
-      {/* --- ফিল্টার এবং সার্চ বার --- */}
       <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-8">
-        {/* Category Filter */}
         <select
           className="select select-bordered w-full max-w-xs"
           value={category}
@@ -71,7 +66,6 @@ const PetsAndSupplies = () => {
           <option value="Pet Care Products">Pet Care Products</option>
         </select>
 
-        {/* Search Bar */}
         <input
           type="text"
           placeholder="Search by name..."
