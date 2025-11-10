@@ -53,7 +53,7 @@ const MyListings = () => {
                 "Your listing has been deleted.",
                 "success"
               );
-              // Refresh the list after deleting
+
               fetchMyListings();
             }
           })
