@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+h2.card-title.text-3xl.font-bold {
+  font-size: 1.7rem;
+}
