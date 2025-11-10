@@ -2,7 +2,7 @@
 
 PawMart is a community platform for pet adoption and selling pet products (food, toys, etc).
 
-[Live Site Link - ([https://pawmart-client.netlify.app]())]
+[Live Site Link - (https://pawmart-client.netlify.app)]
 
 ## Website Features:
 
