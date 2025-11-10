@@ -4,7 +4,6 @@ import { Typewriter, Cursor } from "react-simple-typewriter";
 const Banner = () => {
   return (
     <div className="carousel w-full h-[550px] rounded-lg mb-16">
-      {/* স্লাইড ১ (কুকুর) */}
       <div id="slide1" className="carousel-item relative w-full">
         <img
           src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg"
@@ -33,7 +32,6 @@ const Banner = () => {
         </div>
       </div>
 
-      {/* স্লাইড ২ (বিড়াল) */}
       <div id="slide2" className="carousel-item relative w-full">
         <img
           src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg"
@@ -62,7 +60,6 @@ const Banner = () => {
         </div>
       </div>
 
-      {/* স্লাইড ৩ (পোষা প্রাণীর জিনিসপত্র) */}
       <div id="slide3" className="carousel-item relative w-full">
         <img
           src="https://images.pexels.com/photos/3299905/pexels-photo-3299905.jpeg"
