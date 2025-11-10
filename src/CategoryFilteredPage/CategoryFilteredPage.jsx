@@ -3,20 +3,18 @@ import { Link, useParams } from "react-router-dom";
 import useTitle from "../hooks/useTitle.js";
 
 const CategoryFilteredPage = () => {
-  const { categoryName } = useParams(); // Get category name from URL
+  const { categoryName } = useParams();
   const [listings, setListings] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // ডাইনামিক টাইটেল সেট করা
   useTitle(`PawMart | Category: ${categoryName}`);
 
   useEffect(() => {
     setLoading(true);
-    // আমরা '/all-listings' API থেকেই সব ডেটা আনবো
+
     fetch("https://pawmart-server.vercel.app/all-listings")
       .then((res) => res.json())
       .then((data) => {
-        // ক্লায়েন্ট সাইডেই URL-এর নামের সাথে ক্যাটাগরি ফিল্টার করবো
         const filteredData = data.filter(
           (item) => item.category === categoryName
         );
@@ -27,7 +25,7 @@ const CategoryFilteredPage = () => {
         console.error("Failed to fetch listings:", error);
         setLoading(false);
       });
-  }, [categoryName]); // categoryName পরিবর্তন হলে API আবার কল হবে
+  }, [categoryName]);
 
   if (loading) {
     return (
