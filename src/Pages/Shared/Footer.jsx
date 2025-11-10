@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="mt-16">
-      {/* নিচের লাইনে আমরা grid-cols-1 md:grid-cols-4 যোগ করেছি 
-        যাতে এটি মোবাইলে ১ কলাম এবং বড় স্ক্রিনে ৪ কলাম দেখায় 
-      */}
       <div className="footer grid grid-cols-1 md:grid-cols-4 p-10 bg-base-200 text-base-content">
         <aside>
           <svg
