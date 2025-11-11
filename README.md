@@ -30,3 +30,4 @@ This project is build as an assignment. The purpose is to learn React, React Rou
 - **jsPDF** & **jsPDF-Autotable**
 - **Framer-motion**
 - **React-simple-typewriter**
+- **Swiper**
